@@ -39,7 +39,7 @@
 // Menu Overlay
 .menu {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
@@ -57,11 +57,11 @@
     width: 50%;
     height: 100vh;
     overflow: hidden;
-    // list-style: none;
-    // visibility: none;
-    // &.show {
-    //   visibility: visible;
-    // }
+    list-style: none;
+    visibility: none;
+    &.show {
+      visibility: visible;
+    }
   }
   &-nav {
     padding: 0;

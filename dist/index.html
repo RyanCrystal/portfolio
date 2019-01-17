@@ -10,12 +10,25 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
 
     <title>Welcome To My portfolio</title>
   </head>
   <body id="bg-img">
-    <header>
+    <nav class="navbar">
+      <ul class="navbar-items">
+        <li class="nav-item"><a href="#home">home</a></li>
+        <li class="nav-item"><a href="#about">about</a></li>
+        <li class="nav-item"><a href="#myproject">projects</a></li>
+        <li class="nav-item"><a href="contact">contact</a></li>
+      </ul>
+    </nav>
+    <div class="cover"><h1>On the way ......</h1></div>
+    <!-- <header>
       <div class="menu-btn">
         <div class="btn-line line-1"></div>
         <div class="btn-line line-2"></div>
@@ -38,19 +51,111 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <main id="home">
-      <h1 class="lg-heading">John <span class="text-secondary">Doe</span></h1>
+      <h1 class="lg-heading">Ryan <span class="text-secondary">Wang</span></h1>
 
-      <h2 class="sm-heading">Web Developer</h2>
+      <h2 class="sm-heading">Being a Web Developer ; )</h2>
       <div class="icons">
         <a href="#"> <i class="fab fa-twitter fa-2x"></i> </a>
         <a href="#"> <i class="fab fa-facebook fa-2x"></i> </a>
         <a href="#"> <i class="fab fa-linkedin fa-2x"></i> </a>
         <a href="#"> <i class="fab fa-github fa-2x"></i> </a>
       </div>
+      <div class="main__arrow">
+        <a href="#"
+          >View My Work <span><i class="fas fa-arrow-right"></i></span
+        ></a>
+      </div>
     </main>
+
+    <!-- <nav class="navbar">
+      <ul class="navbar-items">
+        <li class="nav-item"><a href="#home">home</a></li>
+        <li class="nav-item"><a href="#about">about</a></li>
+        <li class="nav-item"><a href="#myproject">My project</a></li>
+        <li class="nav-item"><a href="contact">contact</a></li>
+      </ul>
+    </nav> -->
+
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="about_content">
+        <div class="img_container">
+          <img src="./img/sky1.jpg" alt="sky-picture" />
+          <div>
+            <p>
+              With great passion in web development,I've been teaching myself
+              all along.My focus right now is <strong>JavaScript</strong> and
+              <strong>PHP</strong>.
+            </p>
+          </div>
+        </div>
+        <div class="about_skills">
+          <div class="progressbar">
+            <div class="prefix">HTML</div>
+            <div class="append">
+              <div class="append_prefix append_prefix_1"></div>
+              <div class="number">90%</div>
+            </div>
+          </div>
+          <div class="progressbar">
+            <div class="prefix">CSS</div>
+            <div class="append">
+              <div class="append_prefix" id="append_prefix_2"></div>
+              <div class="number" id="number_2">70%</div>
+            </div>
+          </div>
+          <div class="progressbar">
+            <div class="prefix">JavaScript</div>
+            <div class="append">
+              <div class="append_prefix" id="append_prefix_3"></div>
+              <div class="number" id="number_3">70%</div>
+            </div>
+          </div>
+          <div class="progressbar">
+            <div class="prefix">PHP</div>
+            <div class="append">
+              <div class="append_prefix" id="append_prefix_4"></div>
+              <div class="number" id="number_4">80%</div>
+            </div>
+          </div>
+          <div class="progressbar">
+            <div class="prefix">Bootstrap</div>
+            <div class="append">
+              <div class="append_prefix" id="append_prefix_5"></div>
+              <div class="number" id="number_5">85%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h1>PROJECTS</h1>
+      <div class="projects_titles">
+        <a href="">ALL</a> <a href="">Bootstrap</a> <a href="">JavaScript</a>
+        <a href="">PHP</a>
+      </div>
+      <div class="projects_items">
+        <div class="project_item">
+          <a href=""> <img src="img/projects/project1.jpg" alt="" /> </a>
+        </div>
+        <div class="project_item">
+          <a href=""> <img src="img/projects/project2.jpg" alt="" /> </a>
+        </div>
+        <div class="project_item">
+          <a href=""> <img src="img/projects/project3.jpg" alt="" /> </a>
+        </div>
+        <div class="project_item">
+          <a href=""> <img src="img/projects/project4.jpg" alt="" /> </a>
+        </div>
+        <div class="project_item">
+          <a href=""> <img src="img/projects/project5.jpg" alt="" /> </a>
+        </div>
+      </div>
+    </section>
 
     <script src="js/main.js"></script>
   </body>

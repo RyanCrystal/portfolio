@@ -1,0 +1,26 @@
+.navbar {
+  width: 100%;
+  background: #000;
+  margin: 0;
+  border: 0;
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid #444;
+
+  //   height: 5px;
+  .navbar-items {
+    // height: 50px;
+    // display: inline-block;
+
+    // top: 0;
+    // left: 0;
+    // position: sticky;
+    .nav-item {
+      display: inline-block;
+      text-transform: uppercase;
+      z-index: 5;
+      //   height: 30px;
+      margin-left: 2rem;
+    }
+  }
+}
