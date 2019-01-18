@@ -202,14 +202,14 @@ main {
 #projects {
   background: #d4d2d2;
   color: #000; }
-  #projects h1 {
+  #projects > h1 {
     padding: 2rem; }
   #projects .projects_titles {
     padding: 1rem;
     display: flex;
     justify-content: center; }
     #projects .projects_titles a {
-      margin-left: 5rem;
+      margin-left: 3rem;
       color: #000;
       text-transform: uppercase;
       font-size: 2rem;
@@ -221,10 +221,67 @@ main {
     width: 80%;
     margin: 0 auto;
     display: grid;
+    grid-row-gap: 0;
     grid-template-columns: repeat(3, 1fr); }
+    #projects .projects_items .project_item {
+      position: relative; }
+      #projects .projects_items .project_item img:hover {
+        transition: all 0.5s ease-out; }
+      #projects .projects_items .project_item .project-text {
+        opacity: 0;
+        position: absolute;
+        top: 0%;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+        transition: all 0.5s ease-out; }
+        #projects .projects_items .project_item .project-text h1 {
+          font-weight: 400;
+          font-size: 2rem; }
+      #projects .projects_items .project_item .github {
+        opacity: 0;
+        top: 5%;
+        right: 5%;
+        z-index: 5;
+        position: absolute;
+        transition: all 0.5s ease-out; }
+        #projects .projects_items .project_item .github i {
+          color: black !important; }
+      #projects .projects_items .project_item .project_item_btn {
+        opacity: 0;
+        position: absolute;
+        bottom: 0%;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        width: 170px;
+        color: #000;
+        border: 2px solid red;
+        text-align: center;
+        transition: all 0.5s ease-out; }
+        #projects .projects_items .project_item .project_item_btn:hover {
+          background: red;
+          color: #fff; }
+      #projects .projects_items .project_item:hover .project_item_btn {
+        opacity: 1;
+        display: block;
+        bottom: 20%;
+        padding: 0.5rem 1rem;
+        border: 2px solid red;
+        text-align: center;
+        z-index: 5; }
+      #projects .projects_items .project_item:hover .project-text {
+        opacity: 1;
+        display: block;
+        top: 20%; }
+      #projects .projects_items .project_item:hover .github {
+        opacity: 1; }
+      #projects .projects_items .project_item:hover img {
+        opacity: 0; }
     #projects .projects_items img {
       width: 100%; }
-  #projects h1 {
+  #projects > h1 {
     font-size: 3rem;
     text-align: center;
     font-weight: 500; }

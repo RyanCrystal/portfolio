@@ -248,7 +248,7 @@ main {
 }
 
 #projects {
-  h1 {
+  > h1 {
     padding: 2rem;
   }
   // background: #000;
@@ -259,11 +259,12 @@ main {
     display: flex;
     justify-content: center;
     a {
-      margin-left: 5rem;
+      margin-left: 3rem;
       color: #000;
       text-transform: uppercase;
       font-size: 2rem;
       padding: 0.1rem 2rem;
+
       &:hover {
         background: rgb(153, 33, 53);
         color: #fff;
@@ -274,13 +275,92 @@ main {
     width: 80%;
     margin: 0 auto;
     display: grid;
+    grid-row-gap: 0;
+
     grid-template-columns: repeat(3, 1fr);
+    .project_item {
+      position: relative;
+      img:hover {
+        @include easeOut;
+      }
+      .project-text {
+        opacity: 0;
+        position: absolute;
+        top: 0%;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+
+        text-align: center;
+        h1 {
+          font-weight: 400;
+          font-size: 2rem;
+        }
+
+        @include easeOut;
+      }
+      .github {
+        opacity: 0;
+        top: 5%;
+        right: 5%;
+        z-index: 5;
+        position: absolute;
+        i {
+          color: black !important;
+        }
+
+        @include easeOut;
+      }
+      .project_item_btn {
+        // display: none;
+        opacity: 0;
+
+        position: absolute;
+        bottom: 0%;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        width: 170px;
+        color: #000;
+        border: 2px solid red;
+        text-align: center;
+        @include easeOut;
+        &:hover {
+          background: red;
+          color: #fff;
+        }
+      }
+      &:hover {
+        .project_item_btn {
+          opacity: 1;
+          display: block;
+
+          bottom: 20%;
+          padding: 0.5rem 1rem;
+
+          border: 2px solid red;
+          text-align: center;
+          z-index: 5;
+        }
+        .project-text {
+          opacity: 1;
+          display: block;
+          top: 20%;
+        }
+        .github {
+          opacity: 1;
+        }
+        img {
+          opacity: 0;
+        }
+      }
+    }
 
     img {
       width: 100%;
     }
   }
-  h1 {
+  > h1 {
     font-size: 3rem;
     text-align: center;
     font-weight: 500;
