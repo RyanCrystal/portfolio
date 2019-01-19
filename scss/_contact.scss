@@ -1,0 +1,48 @@
+#contact {
+  background: rgb(133, 35, 35);
+  padding-bottom: 5rem;
+  h1 {
+    font-size: 3rem;
+    padding: 1rem;
+    font-weight: 400;
+  }
+  p {
+    color: #000;
+    font-size: 1.2rem;
+  }
+  input,
+  textarea {
+    min-width: 200px;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+  textarea {
+    font-size: 20px;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  ::-moz-placeholder {
+    font-size: 20px;
+  }
+  :-ms-input-placeholder {
+    font-size: 20px;
+  }
+  ::placeholder {
+    font-size: 20px;
+  }
+  input[type="submit"]:hover {
+    background-color: rgb(133, 35, 35);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .container {
+    text-align: center;
+  }
+}

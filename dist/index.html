@@ -23,8 +23,8 @@
       <ul class="navbar-items">
         <li class="nav-item"><a href="#home">home</a></li>
         <li class="nav-item"><a href="#about">about</a></li>
-        <li class="nav-item"><a href="#myproject">projects</a></li>
-        <li class="nav-item"><a href="contact">contact</a></li>
+        <li class="nav-item"><a href="#projects">projects</a></li>
+        <li class="nav-item"><a href="#contact">contact</a></li>
       </ul>
     </nav>
     <div class="cover"><h1>On the way ......</h1></div>
@@ -73,9 +73,11 @@
     <section id="about">
       <h1>About Me</h1>
       <div class="about_content">
-        <div class="img_container">
-          <img src="./img/sky1.jpg" alt="sky-picture" />
-          <div>
+        <div class="about_content_left">
+          <div class="img_container">
+            <!-- <img src="./img/sky1.jpg" alt="sky-picture" /> -->
+          </div>
+          <div class="intro_text">
             <p>
               With great passion in web development,I've been teaching myself
               all along.My focus right now is <strong>JavaScript</strong> and
@@ -83,6 +85,7 @@
             </p>
           </div>
         </div>
+
         <div class="about_skills">
           <div class="progressbar">
             <div class="prefix">HTML</div>
@@ -126,10 +129,12 @@
     <section id="projects">
       <h1>PROJECTS</h1>
       <div class="projects_titles">
-        <a href="">ALL</a> <a href="">Bootstrap</a> <a href="">JavaScript</a>
-        <a href="">PHP</a>
+        <button class="category active">ALL</button>
+        <button class="category">Bootstrap</button>
+        <button class="category">JavaScript</button>
+        <button class="category">PHP</button>
       </div>
-      <div class="projects_items">
+      <div id="show_all" class="projects_items active">
         <div class="project_item">
           <a href="">
             <img src="img/projects/project1.jpg" alt="" />
@@ -145,20 +150,191 @@
           </div>
         </div>
         <div class="project_item">
-          <a href=""> <img src="img/projects/project2.jpg" alt="" /> </a>
+          <a href="">
+            <img src="img/projects/project2.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>Bootstrap 4</h1>
+            <h3>Theme 2</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
         </div>
         <div class="project_item">
-          <a href=""> <img src="img/projects/project3.jpg" alt="" /> </a>
+          <a href="">
+            <img src="img/projects/project3.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>JavaScript</h1>
+            <h3>App 1</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
         </div>
         <div class="project_item">
-          <a href=""> <img src="img/projects/project4.jpg" alt="" /> </a>
+          <a href="">
+            <img src="img/projects/project4.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>JavaScript</h1>
+            <h3>App 2</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
         </div>
         <div class="project_item">
-          <a href=""> <img src="img/projects/project5.jpg" alt="" /> </a>
+          <a href="">
+            <img src="img/projects/project5.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>PHP</h1>
+            <h3>App 1</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
         </div>
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project6.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>PHP</h1>
+            <h3>App 2</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="show_boostrap" class="projects_items">
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project1.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>Bootstrap 4</h1>
+            <h3>Theme 1</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project2.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>Bootstrap 4</h1>
+            <h3>Theme 2</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="show_javascript" class="projects_items">
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project3.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>JavaScript</h1>
+            <h3>App 1</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project4.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>JavaScript</h1>
+            <h3>App 2</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="show_php" class="projects_items">
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project5.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>PHP</h1>
+            <h3>App 1</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+        <div class="project_item">
+          <a href="">
+            <img src="img/projects/project6.jpg" alt="" />
+
+            <a href="#" class="project_item_btn">Learn More</a></a
+          >
+          <div class="project-text">
+            <h1>PHP</h1>
+            <h3>App 2</h3>
+          </div>
+          <div class="github">
+            <a href=""><i class="fab fa-github fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>Want to reach me?</p>
+        <form class="contact_form" action="">
+          <input type="text" placeholder="name" /><br />
+          <input type="email" placeholder="email" /><br />
+          <textarea rows="8">Message...</textarea><br />
+          <input type="submit" value="SUBMIT" />
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section id="main-footer">
+      <div class="container">
+        <span>Copyright &copy; <span id="year"></span></span>
       </div>
     </section>
 
     <script src="js/main.js"></script>
+    <script>
+      const date = new Date();
+      document.getElementById("year").textContent = date.getFullYear();
+    </script>
   </body>
 </html>

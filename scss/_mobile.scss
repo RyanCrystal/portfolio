@@ -3,16 +3,83 @@
 }
 // Desktops & Laptops
 @include mediaLg {
+  #projects {
+    .projects_titles {
+      padding: 0.5rem;
+      // background: red;
+      button {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+      }
+    }
+    .projects_items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #contact {
+    input,
+    textarea {
+      width: 60%;
+    }
+  }
 }
 // Tablets & Small Laptops
 @include mediaMd {
-  main {
-    align-items: center;
-    text-align: center;
+  #home h1 {
+    font-size: 2.5rem;
+  }
+  #about {
+    .about_content {
+      display: block;
+      // flex-wrap: nowrap;
 
-    .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
+      .about_content_left {
+        width: 100%;
+        .img_container {
+          min-height: 300px;
+        }
+        // display: table;
+        // margin-bottom: 0 200px auto;
+        p {
+          display: block;
+          font-size: 1.2rem;
+        }
+      }
+
+      .about_skills {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        .progressbar .append .number {
+          color: transparent;
+        }
+        .progressbar {
+          &:not(:last-child) {
+            margin-bottom: 0.5rem;
+          }
+          line-height: 0.5rem;
+        }
+      }
+    }
+  }
+  #projects {
+    .projects_titles {
+      padding: 0.5rem;
+      // background: red;
+      button {
+        margin-left: 0.5rem;
+        font-size: 1.1rem;
+        padding: 0.1rem 1rem;
+      }
+    }
+    .projects_items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  #contact {
+    input,
+    textarea {
+      width: 70%;
     }
   }
 }
@@ -20,5 +87,22 @@
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
+  }
+  #projects {
+    .projects_titles {
+      padding: 0.5rem;
+      // background: red;
+      button {
+        padding: 0.5rem;
+        margin-left: 0rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  #contact {
+    input,
+    textarea {
+      width: 80%;
+    }
   }
 }
