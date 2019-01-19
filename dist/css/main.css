@@ -21,11 +21,12 @@
 
 #contact {
   background: #852323;
+  padding-top: 5rem;
   padding-bottom: 5rem; }
   #contact h1 {
     font-size: 3rem;
     padding: 1rem;
-    font-weight: 400; }
+    font-weight: 500; }
   #contact p {
     color: #000;
     font-size: 1.2rem; }
@@ -179,12 +180,13 @@ main {
 #about {
   width: 90%;
   margin: 0 auto;
-  padding: 3rem; }
+  padding: 5rem; }
   #about h1 {
     text-align: center;
     color: #000;
     font-size: 3rem;
-    margin: 2rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
     font-weight: 500; }
   #about .about_content {
     display: flex;
@@ -248,11 +250,12 @@ main {
             width: 15%; }
 
 #projects {
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
   background: #d4d2d2;
   color: #000; }
   #projects > h1 {
-    padding: 2rem; }
+    padding: 4rem; }
   #projects .projects_titles {
     padding: 1rem;
     display: flex;
@@ -297,6 +300,8 @@ main {
         #projects .projects_items .project_item .project-text h1 {
           font-weight: 400;
           font-size: 2rem; }
+        #projects .projects_items .project_item .project-text h3 {
+          color: red; }
       #projects .projects_items .project_item .github {
         opacity: 0;
         top: 5%;

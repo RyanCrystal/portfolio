@@ -152,12 +152,13 @@ main {
   width: 90%;
   margin: 0 auto;
 
-  padding: 3rem;
+  padding: 5rem;
   h1 {
     text-align: center;
     color: #000;
     font-size: 3rem;
-    margin: 2rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
     font-weight: 500;
   }
   .about_content {
@@ -267,9 +268,10 @@ main {
 // project styling
 #projects {
   // height: 800px;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
   > h1 {
-    padding: 2rem;
+    padding: 4rem;
   }
   // background: #000;
   background: rgb(212, 210, 210);
@@ -326,6 +328,9 @@ main {
         h1 {
           font-weight: 400;
           font-size: 2rem;
+        }
+        h3 {
+          color: red;
         }
 
         @include easeOut;
