@@ -328,7 +328,7 @@ main {
         position: absolute;
         transition: all 0.5s ease-out; }
         #projects .projects_items .project_item .github i {
-          color: black !important; }
+          color: black; }
       #projects .projects_items .project_item .project_item_btn {
         opacity: 0;
         position: absolute;

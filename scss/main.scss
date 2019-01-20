@@ -365,7 +365,7 @@ main {
         z-index: 5;
         position: absolute;
         i {
-          color: black !important;
+          color: black;
         }
 
         @include easeOut;

@@ -16,8 +16,8 @@ for (let i = 0; i < cate.length && i < pro_items.length; i++) {
     cate[i].classList.add("active");
     pro_items[i].classList.add("active");
     if (i !== 0 && window.innerWidth > 1170) {
-      // pro_items[i].style.gridTemplateColumns = "repeat(2, 1fr)";
-      pro_items[i].style.margin = "auto";
+      pro_items[i].style.gridTemplateColumns = "repeat(2, 1fr)";
+      // pro_items[i].style.margin = "auto";
       pro_items[i].style.width = "80%";
     }
   });
@@ -28,21 +28,41 @@ const filter_js = document.querySelectorAll(".filter[data-filter='js']");
 const filter_php = document.querySelectorAll(".filter[data-filter='php']");
 
 filter_all[0].addEventListener("click", function() {
-  document.querySelector(".float-bar").style.left = "0px";
-  document.querySelector(".float-bar>.flex.row").style.left = "0px";
+  document.querySelector(".float-bar").style.left = "25px";
+  document.querySelector(".float-bar").style.width = "112px";
+  document.querySelector(".float-bar>.flex.row").style.left = "-25px";
 });
 filter_bs[0].addEventListener("click", function() {
   document.querySelector(".float-bar").style.left = "186.925px";
+  document.querySelector(".float-bar").style.width = "151.925px";
   document.querySelector(".float-bar>.flex.row").style.left = "-186.925px";
 });
 filter_js[0].addEventListener("click", function() {
-  document.querySelector(".float-bar").style.left = "388.387px";
-  document.querySelector(".float-bar>.flex.row").style.left = "-388.387px";
+  document.querySelector(".float-bar").style.left = "395.387px";
+  document.querySelector(".float-bar").style.width = "184.387px";
+  document.querySelector(".float-bar>.flex.row").style.left = "-395.387px";
 });
 filter_php[0].addEventListener("click", function() {
   document.querySelector(".float-bar").style.left = "621.875px";
+  document.querySelector(".float-bar").style.width = "120.875px";
   document.querySelector(".float-bar>.flex.row").style.left = "-621.875px";
 });
 
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
+
+function resize() {
+  if (window.innerWidth < 769) {
+    for (let i = 0; i < pro_items.length; i++) {
+      pro_items[i].style.gridTemplateColumns = "repeat(1, 1fr)";
+    }
+  } else if (window.innerWidth >= 769 && window.innerWidth < 1170) {
+    for (let i = 0; i < pro_items.length; i++) {
+      pro_items[i].style.gridTemplateColumns = "repeat(2, 1fr)";
+    }
+  } else if (window.innerWidth >= 1170) {
+    pro_items[0].style.gridTemplateColumns = "repeat(3, 1fr)";
+  }
+}
+
+window.onresize = resize;
