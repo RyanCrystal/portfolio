@@ -110,7 +110,7 @@ main {
   background-repeat: no-repeat;
   z-index: -2;
   animation-name: fadeslow;
-  animation-duration: 1s;
+  animation-duration: 5s;
   opacity: 0;
   // z-index: 2;
   // display: none;
@@ -271,6 +271,9 @@ main {
   padding-top: 5rem;
   padding-bottom: 10rem;
   > h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
     padding: 4rem;
   }
   // background: #000;
@@ -325,17 +328,22 @@ main {
   .projects_items {
     width: 80%;
     margin: 0 auto;
-    display: grid;
+    // display: grid;
     grid-row-gap: 0;
     display: none;
+    opacity: 0;
+
+    @include easeOut;
 
     grid-template-columns: repeat(3, 1fr);
     &.active {
       @include easeOut;
       display: grid;
+      opacity: 1;
     }
     .project_item {
       position: relative;
+      @include easeOut;
       img:hover {
         @include easeOut;
       }
@@ -419,61 +427,6 @@ main {
       width: 100%;
     }
   }
-  > h1 {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 500;
-  }
-}
-
-.filter-wrap {
-  position: relative;
-  padding: 2rem 0;
-}
-.flex.row {
-  flex-direction: row;
-}
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.filter {
-  font-size: 13pt;
-  padding: 0 40px;
-  margin: 0 25px;
-}
-.float-bar {
-  top: 0;
-  bottom: 0;
-  left: 30px;
-  position: absolute;
-  margin: auto 0;
-  overflow: hidden;
-  height: 25px;
-  border-radius: 1px;
-  background: #e31b6d;
-  transition: all 0.5s ease-in-out;
-}
-.float-bar .row .filter {
-  color: #fff;
-}
-.float-bar .row {
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  position: absolute;
-  margin: auto 0;
-  transition: left 0.5s ease-in-out;
-}
-.filter {
-  font-size: 13pt;
-  padding: 0 40px;
-  margin: 0 25px;
-  cursor: pointer;
-  transition: background-color 0.5s;
 }
 
 @import "mobile";

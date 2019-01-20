@@ -1,17 +1,5 @@
 const cate = document.querySelectorAll(".filter");
 const pro_items = document.querySelectorAll(".projects_items");
-// const all_left_dist = cate[0].offsetLeft;
-// const bs_left_dist = cate[1].offsetLeft;
-// const js_left_dist = cate[2].offsetLeft;
-// const php_left_dist = cate[3].offsetLeft;
-
-// const all_width = cate[0].offsetWidth;
-// const bs_width = cate[1].offsetWidth;
-// const js_width = cate[2].offsetWidth;
-// const php_width = cate[3].offsetWidth;
-// console.log(all_width);
-
-// console.log(all_left_dist);
 
 // switch button tabs and get color
 function removeAllActive() {
@@ -30,71 +18,12 @@ function triggerProject() {
       if (i !== 0 && window.innerWidth > 1170) {
         pro_items[i].style.gridTemplateColumns = "repeat(2, 1fr)";
         // pro_items[i].style.margin = "auto";
-        pro_items[i].style.width = "80%";
+        // pro_items[i].style.width = "70%";
       }
     });
   }
 }
-
-//
-// const filter_all = document.querySelectorAll(".filter[data-filter='all']");
-// const filter_bs = document.querySelectorAll(".filter[data-filter='bs']");
-// const filter_js = document.querySelectorAll(".filter[data-filter='js']");
-// const filter_php = document.querySelectorAll(".filter[data-filter='php']");
-
-// change tab switch paras according to screen size
-// if (window.innerWidth > 768) {
-//   filter_all[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = all_left_dist + "px";
-//     document.querySelector(".float-bar").style.width = all_width + "px";
-//     document.querySelector(".float-bar>.flex.row").style.left =
-//       "-" + all_left_dist + "px";
-//   });
-//   filter_bs[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = bs_left_dist + "px";
-//     document.querySelector(".float-bar").style.width = bs_width + "px";
-//     document.querySelector(".float-bar>.flex.row").style.left =
-//       "-" + bs_left_dist + "px";
-//   });
-//   filter_js[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = js_left_dist + "px";
-//     document.querySelector(".float-bar").style.width = js_width + "px";
-//     document.querySelector(".float-bar>.flex.row").style.left =
-//       "-" + js_left_dist + "px";
-//   });
-//   filter_php[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = php_left_dist + "px";
-//     document.querySelector(".float-bar").style.width = php_width + "px";
-//     document.querySelector(".float-bar>.flex.row").style.left =
-//       "-" + php_left_dist + "px";
-//   });
-// }
-// // when screen size is between sm and md
-// else if (window.innerWidth <= 768 && window.innerWidth > 500) {
-//   filter_all[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "5px";
-//     document.querySelector(".float-bar").style.width = "68px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-5px";
-//   });
-//   filter_bs[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "80px";
-//     document.querySelector(".float-bar").style.width = "130px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-80px";
-//   });
-//   filter_js[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "220px";
-//     document.querySelector(".float-bar").style.width = "134.387px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-220px";
-//   });
-//   filter_php[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "621.875px";
-//     document.querySelector(".float-bar").style.width = "120.875px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-621.875px";
-//   });
-// }
-
-function resize() {
-  displayProItems();
+function switchColor() {
   const filter_all = document.querySelectorAll(".filter[data-filter='all']");
   const filter_bs = document.querySelectorAll(".filter[data-filter='bs']");
   const filter_js = document.querySelectorAll(".filter[data-filter='js']");
@@ -140,32 +69,7 @@ function resize() {
       "-" + php_left_dist + "px";
   });
 }
-// when screen size is between sm and md
-// else if (window.innerWidth <= 768 && window.innerWidth > 500) {
-//   filter_all[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "5px";
-//     document.querySelector(".float-bar").style.width = "68px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-5px";
-//   });
-//   filter_bs[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "80px";
-//     document.querySelector(".float-bar").style.width = "130px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-80px";
-//   });
-//   filter_js[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "220px";
-//     document.querySelector(".float-bar").style.width = "134.387px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-220px";
-//   });
-//   filter_php[0].addEventListener("click", function() {
-//     document.querySelector(".float-bar").style.left = "621.875px";
-//     document.querySelector(".float-bar").style.width = "120.875px";
-//     document.querySelector(".float-bar>.flex.row").style.left = "-621.875px";
-//   });
 
-//   // console.log(all_width);
-
-//   // console.log(all_left_dist);
 function displayProItems() {
   if (window.innerWidth < 769) {
     for (let i = 0; i < pro_items.length; i++) {
@@ -180,8 +84,14 @@ function displayProItems() {
   }
 }
 
+function resize() {
+  displayProItems();
+  switchColor();
+}
+
 function init() {
   triggerProject();
+  switchColor();
   displayProItems();
   window.onresize = resize;
 }

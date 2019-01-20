@@ -156,7 +156,7 @@ main {
   background-repeat: no-repeat;
   z-index: -2;
   animation-name: fadeslow;
-  animation-duration: 1s;
+  animation-duration: 5s;
   opacity: 0; }
   .cover h1 {
     text-align: center;
@@ -255,6 +255,9 @@ main {
   background: #d4d2d2;
   color: #000; }
   #projects > h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
     padding: 4rem; }
   #projects .filter-wrap {
     position: relative;
@@ -295,15 +298,18 @@ main {
   #projects .projects_items {
     width: 80%;
     margin: 0 auto;
-    display: grid;
     grid-row-gap: 0;
     display: none;
+    opacity: 0;
+    transition: all 0.5s ease-out;
     grid-template-columns: repeat(3, 1fr); }
     #projects .projects_items.active {
       transition: all 0.5s ease-out;
-      display: grid; }
+      display: grid;
+      opacity: 1; }
     #projects .projects_items .project_item {
-      position: relative; }
+      position: relative;
+      transition: all 0.5s ease-out; }
       #projects .projects_items .project_item img:hover {
         transition: all 0.5s ease-out; }
       #projects .projects_items .project_item .project-text {
@@ -362,58 +368,6 @@ main {
         opacity: 0; }
     #projects .projects_items img {
       width: 100%; }
-  #projects > h1 {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 500; }
-
-.filter-wrap {
-  position: relative;
-  padding: 2rem 0; }
-
-.flex.row {
-  flex-direction: row; }
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.filter {
-  font-size: 13pt;
-  padding: 0 40px;
-  margin: 0 25px; }
-
-.float-bar {
-  top: 0;
-  bottom: 0;
-  left: 30px;
-  position: absolute;
-  margin: auto 0;
-  overflow: hidden;
-  height: 25px;
-  border-radius: 1px;
-  background: #e31b6d;
-  transition: all 0.5s ease-in-out; }
-
-.float-bar .row .filter {
-  color: #fff; }
-
-.float-bar .row {
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  position: absolute;
-  margin: auto 0;
-  transition: left 0.5s ease-in-out; }
-
-.filter {
-  font-size: 13pt;
-  padding: 0 40px;
-  margin: 0 25px;
-  cursor: pointer;
-  transition: background-color 0.5s; }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   #projects .projects_titles {
