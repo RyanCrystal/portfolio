@@ -143,7 +143,7 @@ main {
 
 @keyframes flash {
   0% {
-    diplay: none;
+    display: none;
   }
 }
 
@@ -276,30 +276,52 @@ main {
   // background: #000;
   background: rgb(212, 210, 210);
   color: #000;
-  .projects_titles {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    button {
-      margin-left: 3rem;
-      color: #000;
-      text-transform: uppercase;
-      font-size: 2rem;
-      padding: 0.1rem 2rem;
-      border: none;
-      outline: none;
-      background-color: inherit;
-      cursor: pointer;
-      &.active {
-        background: rgb(133, 35, 35);
-      }
 
-      &:hover {
-        background: rgb(133, 35, 35);
-        color: #fff;
-      }
-    }
+  .filter-wrap {
+    position: relative;
+    padding: 2rem 0;
   }
+  .flex.row {
+    flex-direction: row;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .float-bar {
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    position: absolute;
+    margin: auto 0;
+    overflow: hidden;
+    height: 25px;
+    border-radius: 1px;
+    background: #e31b6d;
+    transition: all 0.5s ease-in-out;
+  }
+  .float-bar .row .filter {
+    color: #fff;
+  }
+  .float-bar .row {
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    position: absolute;
+    margin: auto 0;
+    transition: left 0.5s ease-in-out;
+  }
+  .filter {
+    font-size: 13pt;
+    padding: 0 40px;
+    margin: 0 25px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+
   .projects_items {
     width: 80%;
     margin: 0 auto;
@@ -309,6 +331,7 @@ main {
 
     grid-template-columns: repeat(3, 1fr);
     &.active {
+      @include easeOut;
       display: grid;
     }
     .project_item {
@@ -401,6 +424,56 @@ main {
     text-align: center;
     font-weight: 500;
   }
+}
+
+.filter-wrap {
+  position: relative;
+  padding: 2rem 0;
+}
+.flex.row {
+  flex-direction: row;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  font-size: 13pt;
+  padding: 0 40px;
+  margin: 0 25px;
+}
+.float-bar {
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  position: absolute;
+  margin: auto 0;
+  overflow: hidden;
+  height: 25px;
+  border-radius: 1px;
+  background: #e31b6d;
+  transition: all 0.5s ease-in-out;
+}
+.float-bar .row .filter {
+  color: #fff;
+}
+.float-bar .row {
+  top: 0;
+  bottom: 0;
+  left: -30px;
+  position: absolute;
+  margin: auto 0;
+  transition: left 0.5s ease-in-out;
+}
+.filter {
+  font-size: 13pt;
+  padding: 0 40px;
+  margin: 0 25px;
+  cursor: pointer;
+  transition: background-color 0.5s;
 }
 
 @import "mobile";
