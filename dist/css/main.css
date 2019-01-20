@@ -449,12 +449,12 @@ main {
         line-height: 0.5rem; }
         #about .about_content .about_skills .progressbar:not(:last-child) {
           margin-bottom: 0.5rem; }
-  #projects .projects_titles {
-    padding: 0.5rem; }
-    #projects .projects_titles button {
-      margin-left: 0.5rem;
-      font-size: 1.1rem;
-      padding: 0.1rem 1rem; }
+  #projects .filter {
+    font-size: 13pt;
+    padding: 0 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.5s; }
   #projects .projects_items {
     grid-template-columns: repeat(1, 1fr); }
   #contact input,

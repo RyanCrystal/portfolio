@@ -63,14 +63,12 @@
     }
   }
   #projects {
-    .projects_titles {
-      padding: 0.5rem;
-      // background: red;
-      button {
-        margin-left: 0.5rem;
-        font-size: 1.1rem;
-        padding: 0.1rem 1rem;
-      }
+    .filter {
+      font-size: 13pt;
+      padding: 0 15px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background-color 0.5s;
     }
     .projects_items {
       grid-template-columns: repeat(1, 1fr);

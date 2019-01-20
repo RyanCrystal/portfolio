@@ -1,57 +1,172 @@
-console.log("hello11");
-
 const cate = document.querySelectorAll(".filter");
 const pro_items = document.querySelectorAll(".projects_items");
+// const all_left_dist = cate[0].offsetLeft;
+// const bs_left_dist = cate[1].offsetLeft;
+// const js_left_dist = cate[2].offsetLeft;
+// const php_left_dist = cate[3].offsetLeft;
 
-// window.resize(function() {
-//   console.log("window was resized");
-// });
+// const all_width = cate[0].offsetWidth;
+// const bs_width = cate[1].offsetWidth;
+// const js_width = cate[2].offsetWidth;
+// const php_width = cate[3].offsetWidth;
+// console.log(all_width);
+
+// console.log(all_left_dist);
+
 // switch button tabs and get color
-for (let i = 0; i < cate.length && i < pro_items.length; i++) {
-  cate[i].addEventListener("click", function() {
-    for (let i = 0; i < cate.length && i < pro_items.length; i++) {
-      cate[i].classList.remove("active");
-      pro_items[i].classList.remove("active");
-    }
-    cate[i].classList.add("active");
-    pro_items[i].classList.add("active");
-    if (i !== 0 && window.innerWidth > 1170) {
-      pro_items[i].style.gridTemplateColumns = "repeat(2, 1fr)";
-      // pro_items[i].style.margin = "auto";
-      pro_items[i].style.width = "80%";
-    }
-  });
+function removeAllActive() {
+  for (let i = 0; i < cate.length && i < pro_items.length; i++) {
+    // cate[i].classList.remove("active");
+    pro_items[i].classList.remove("active");
+  }
 }
-const filter_all = document.querySelectorAll(".filter[data-filter='all']");
-const filter_bs = document.querySelectorAll(".filter[data-filter='bs']");
-const filter_js = document.querySelectorAll(".filter[data-filter='js']");
-const filter_php = document.querySelectorAll(".filter[data-filter='php']");
+function triggerProject() {
+  for (let i = 0; i < cate.length && i < pro_items.length; i++) {
+    cate[i].addEventListener("click", function() {
+      removeAllActive();
 
-filter_all[0].addEventListener("click", function() {
-  document.querySelector(".float-bar").style.left = "25px";
-  document.querySelector(".float-bar").style.width = "112px";
-  document.querySelector(".float-bar>.flex.row").style.left = "-25px";
-});
-filter_bs[0].addEventListener("click", function() {
-  document.querySelector(".float-bar").style.left = "186.925px";
-  document.querySelector(".float-bar").style.width = "151.925px";
-  document.querySelector(".float-bar>.flex.row").style.left = "-186.925px";
-});
-filter_js[0].addEventListener("click", function() {
-  document.querySelector(".float-bar").style.left = "395.387px";
-  document.querySelector(".float-bar").style.width = "184.387px";
-  document.querySelector(".float-bar>.flex.row").style.left = "-395.387px";
-});
-filter_php[0].addEventListener("click", function() {
-  document.querySelector(".float-bar").style.left = "621.875px";
-  document.querySelector(".float-bar").style.width = "120.875px";
-  document.querySelector(".float-bar>.flex.row").style.left = "-621.875px";
-});
+      // cate[i].classList.add("active");
+      pro_items[i].classList.add("active");
+      if (i !== 0 && window.innerWidth > 1170) {
+        pro_items[i].style.gridTemplateColumns = "repeat(2, 1fr)";
+        // pro_items[i].style.margin = "auto";
+        pro_items[i].style.width = "80%";
+      }
+    });
+  }
+}
 
-const heightOutput = document.querySelector("#height");
-const widthOutput = document.querySelector("#width");
+//
+// const filter_all = document.querySelectorAll(".filter[data-filter='all']");
+// const filter_bs = document.querySelectorAll(".filter[data-filter='bs']");
+// const filter_js = document.querySelectorAll(".filter[data-filter='js']");
+// const filter_php = document.querySelectorAll(".filter[data-filter='php']");
+
+// change tab switch paras according to screen size
+// if (window.innerWidth > 768) {
+//   filter_all[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = all_left_dist + "px";
+//     document.querySelector(".float-bar").style.width = all_width + "px";
+//     document.querySelector(".float-bar>.flex.row").style.left =
+//       "-" + all_left_dist + "px";
+//   });
+//   filter_bs[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = bs_left_dist + "px";
+//     document.querySelector(".float-bar").style.width = bs_width + "px";
+//     document.querySelector(".float-bar>.flex.row").style.left =
+//       "-" + bs_left_dist + "px";
+//   });
+//   filter_js[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = js_left_dist + "px";
+//     document.querySelector(".float-bar").style.width = js_width + "px";
+//     document.querySelector(".float-bar>.flex.row").style.left =
+//       "-" + js_left_dist + "px";
+//   });
+//   filter_php[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = php_left_dist + "px";
+//     document.querySelector(".float-bar").style.width = php_width + "px";
+//     document.querySelector(".float-bar>.flex.row").style.left =
+//       "-" + php_left_dist + "px";
+//   });
+// }
+// // when screen size is between sm and md
+// else if (window.innerWidth <= 768 && window.innerWidth > 500) {
+//   filter_all[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "5px";
+//     document.querySelector(".float-bar").style.width = "68px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-5px";
+//   });
+//   filter_bs[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "80px";
+//     document.querySelector(".float-bar").style.width = "130px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-80px";
+//   });
+//   filter_js[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "220px";
+//     document.querySelector(".float-bar").style.width = "134.387px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-220px";
+//   });
+//   filter_php[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "621.875px";
+//     document.querySelector(".float-bar").style.width = "120.875px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-621.875px";
+//   });
+// }
 
 function resize() {
+  displayProItems();
+  const filter_all = document.querySelectorAll(".filter[data-filter='all']");
+  const filter_bs = document.querySelectorAll(".filter[data-filter='bs']");
+  const filter_js = document.querySelectorAll(".filter[data-filter='js']");
+  const filter_php = document.querySelectorAll(".filter[data-filter='php']");
+  const all_left_dist = cate[0].offsetLeft;
+  const bs_left_dist = cate[1].offsetLeft;
+  const js_left_dist = cate[2].offsetLeft;
+  const php_left_dist = cate[3].offsetLeft;
+
+  const all_width = cate[0].offsetWidth;
+  const bs_width = cate[1].offsetWidth;
+  const js_width = cate[2].offsetWidth;
+  const php_width = cate[3].offsetWidth;
+  document.querySelector(".float-bar").style.left = all_left_dist + "px";
+  document.querySelector(".float-bar").style.width = all_width + "px";
+  document.querySelector(".float-bar>.flex.row").style.left =
+    "-" + all_left_dist + "px";
+  removeAllActive();
+  pro_items[0].classList.add("active");
+
+  filter_all[0].addEventListener("click", function() {
+    document.querySelector(".float-bar").style.left = all_left_dist + "px";
+    document.querySelector(".float-bar").style.width = all_width + "px";
+    document.querySelector(".float-bar>.flex.row").style.left =
+      "-" + all_left_dist + "px";
+  });
+  filter_bs[0].addEventListener("click", function() {
+    document.querySelector(".float-bar").style.left = bs_left_dist + "px";
+    document.querySelector(".float-bar").style.width = bs_width + "px";
+    document.querySelector(".float-bar>.flex.row").style.left =
+      "-" + bs_left_dist + "px";
+  });
+  filter_js[0].addEventListener("click", function() {
+    document.querySelector(".float-bar").style.left = js_left_dist + "px";
+    document.querySelector(".float-bar").style.width = js_width + "px";
+    document.querySelector(".float-bar>.flex.row").style.left =
+      "-" + js_left_dist + "px";
+  });
+  filter_php[0].addEventListener("click", function() {
+    document.querySelector(".float-bar").style.left = php_left_dist + "px";
+    document.querySelector(".float-bar").style.width = php_width + "px";
+    document.querySelector(".float-bar>.flex.row").style.left =
+      "-" + php_left_dist + "px";
+  });
+}
+// when screen size is between sm and md
+// else if (window.innerWidth <= 768 && window.innerWidth > 500) {
+//   filter_all[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "5px";
+//     document.querySelector(".float-bar").style.width = "68px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-5px";
+//   });
+//   filter_bs[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "80px";
+//     document.querySelector(".float-bar").style.width = "130px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-80px";
+//   });
+//   filter_js[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "220px";
+//     document.querySelector(".float-bar").style.width = "134.387px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-220px";
+//   });
+//   filter_php[0].addEventListener("click", function() {
+//     document.querySelector(".float-bar").style.left = "621.875px";
+//     document.querySelector(".float-bar").style.width = "120.875px";
+//     document.querySelector(".float-bar>.flex.row").style.left = "-621.875px";
+//   });
+
+//   // console.log(all_width);
+
+//   // console.log(all_left_dist);
+function displayProItems() {
   if (window.innerWidth < 769) {
     for (let i = 0; i < pro_items.length; i++) {
       pro_items[i].style.gridTemplateColumns = "repeat(1, 1fr)";
@@ -65,4 +180,11 @@ function resize() {
   }
 }
 
-window.onresize = resize;
+function init() {
+  triggerProject();
+  displayProItems();
+  window.onresize = resize;
+}
+init();
+
+// }
