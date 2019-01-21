@@ -7,21 +7,40 @@
   top: 0;
   border-bottom: 2px solid #444;
   z-index: 6;
+  .nav-container {
+    display: flex;
+    .buttons {
+      // display: inline-block;
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      .button {
+        background: #fff;
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        @include easeOut;
+      }
+    }
+    .navbar-items {
+      .nav-item {
+        display: inline-block;
+        text-transform: uppercase;
+        :hover {
+          color: #e31b6d;
+        }
+        &.active {
+          a {
+            color: #e31b6d;
+          }
+        }
 
-  //   height: 5px;
-  .navbar-items {
-    // height: 50px;
-    // display: inline-block;
-
-    // top: 0;
-    // left: 0;
-    // position: sticky;
-    .nav-item {
-      display: inline-block;
-      text-transform: uppercase;
-
-      //   height: 30px;
-      margin-left: 2rem;
+        //   height: 30px;
+        margin-left: 2rem;
+      }
     }
   }
+  //   height: 5px;
 }

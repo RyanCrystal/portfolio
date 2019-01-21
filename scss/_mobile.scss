@@ -28,13 +28,51 @@
   #home h1 {
     font-size: 2.5rem;
   }
+
+  .navbar {
+    .nav-container {
+      height: 56px;
+      display: block;
+      .buttons {
+        display: block;
+      }
+      .navbar-items {
+        // opacity: 0;
+
+        &.active {
+          opacity: 1;
+          @include easeOut;
+        }
+        position: fixed;
+        display: block;
+        opacity: 0;
+        top: 40px;
+
+        width: 100%;
+        background: #444;
+
+        // margin-top: 0;
+        // margin-bottom: 0;
+        .nav-item {
+          position: relative;
+          left: -50px;
+          margin-bottom: 10px;
+          display: block;
+        }
+      }
+    }
+  }
   #about {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
     .about_content {
       display: block;
       // flex-wrap: nowrap;
 
       .about_content_left {
-        width: 100%;
+        width: 70%;
+        margin: 0 auto;
         .img_container {
           min-height: 300px;
         }
@@ -47,7 +85,7 @@
       }
 
       .about_skills {
-        width: 100%;
+        width: 90%;
         display: block;
         margin: 0 auto;
         .progressbar .append .number {
@@ -86,6 +124,18 @@
   main#home h1 {
     margin-top: 10vh;
   }
+
+  // .navbar {
+  //   .nav-container {
+  //     height: 56px;
+  //     .navbar-items {
+  //       // opacity: 0;
+  //       // margin-top: 0;
+  //       // margin-bottom: 0;
+  //       display: none;
+  //     }
+  //   }
+  // }
   #projects {
     .projects_titles {
       padding: 0.5rem;
@@ -95,6 +145,18 @@
         margin-left: 0rem;
         font-size: 1rem;
       }
+    }
+  }
+  #projects {
+    .filter {
+      font-size: 11pt;
+      padding: 0 10px;
+      margin: 0 8px;
+      cursor: pointer;
+      transition: background-color 0.5s;
+    }
+    .projects_items {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   #contact {

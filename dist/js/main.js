@@ -1,5 +1,19 @@
 const cate = document.querySelectorAll(".filter");
 const pro_items = document.querySelectorAll(".projects_items");
+const menu_btn = document.querySelector(".buttons");
+menu_btn.addEventListener("click", toggleActive);
+function toggleActive() {
+  document.querySelector(".navbar-items").classList.toggle("active");
+}
+const menu_items = document.querySelectorAll(".nav-item");
+for (let i of menu_items) {
+  i.addEventListener("click", function() {
+    for (let k of menu_items) {
+      k.classList.remove("active");
+    }
+    i.classList.add("active");
+  });
+}
 
 // switch button tabs and get color
 function removeAllActive() {

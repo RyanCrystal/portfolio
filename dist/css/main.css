@@ -7,10 +7,28 @@
   top: 0;
   border-bottom: 2px solid #444;
   z-index: 6; }
-  .navbar .navbar-items .nav-item {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-left: 2rem; }
+  .navbar .nav-container {
+    display: flex; }
+    .navbar .nav-container .buttons {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer; }
+      .navbar .nav-container .buttons .button {
+        background: #fff;
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        transition: all 0.5s ease-out; }
+    .navbar .nav-container .navbar-items .nav-item {
+      display: inline-block;
+      text-transform: uppercase;
+      margin-left: 2rem; }
+      .navbar .nav-container .navbar-items .nav-item :hover {
+        color: #e31b6d; }
+      .navbar .nav-container .navbar-items .nav-item.active a {
+        color: #e31b6d; }
 
 #main-footer {
   background: #000000;
@@ -196,7 +214,7 @@ main {
       #about .about_content .about_content_left .img_container {
         background: url("../img/sky1.jpg") no-repeat center center;
         background-size: cover;
-        height: 200px;
+        min-height: 200px;
         padding: 0;
         border-radius: 50%;
         min-width: 200px; }
@@ -384,25 +402,50 @@ main {
 @media screen and (max-width: 768px) {
   #home h1 {
     font-size: 2.5rem; }
-  #about .about_content {
+  .navbar .nav-container {
+    height: 56px;
     display: block; }
-    #about .about_content .about_content_left {
-      width: 100%; }
-      #about .about_content .about_content_left .img_container {
-        min-height: 300px; }
-      #about .about_content .about_content_left p {
-        display: block;
-        font-size: 1.2rem; }
-    #about .about_content .about_skills {
-      width: 100%;
+    .navbar .nav-container .buttons {
+      display: block; }
+    .navbar .nav-container .navbar-items {
+      position: fixed;
       display: block;
-      margin: 0 auto; }
-      #about .about_content .about_skills .progressbar .append .number {
-        color: transparent; }
-      #about .about_content .about_skills .progressbar {
-        line-height: 0.5rem; }
-        #about .about_content .about_skills .progressbar:not(:last-child) {
-          margin-bottom: 0.5rem; }
+      opacity: 0;
+      top: 40px;
+      width: 100%;
+      background: #444; }
+      .navbar .nav-container .navbar-items.active {
+        opacity: 1;
+        transition: all 0.5s ease-out; }
+      .navbar .nav-container .navbar-items .nav-item {
+        position: relative;
+        left: -50px;
+        margin-bottom: 10px;
+        display: block; }
+  #about {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0; }
+    #about .about_content {
+      display: block; }
+      #about .about_content .about_content_left {
+        width: 70%;
+        margin: 0 auto; }
+        #about .about_content .about_content_left .img_container {
+          min-height: 300px; }
+        #about .about_content .about_content_left p {
+          display: block;
+          font-size: 1.2rem; }
+      #about .about_content .about_skills {
+        width: 90%;
+        display: block;
+        margin: 0 auto; }
+        #about .about_content .about_skills .progressbar .append .number {
+          color: transparent; }
+        #about .about_content .about_skills .progressbar {
+          line-height: 0.5rem; }
+          #about .about_content .about_skills .progressbar:not(:last-child) {
+            margin-bottom: 0.5rem; }
   #projects .filter {
     font-size: 13pt;
     padding: 0 15px;
@@ -424,6 +467,14 @@ main {
       padding: 0.5rem;
       margin-left: 0rem;
       font-size: 1rem; }
+  #projects .filter {
+    font-size: 11pt;
+    padding: 0 10px;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.5s; }
+  #projects .projects_items {
+    grid-template-columns: repeat(1, 1fr); }
   #contact input,
   #contact textarea {
     width: 80%; } }
