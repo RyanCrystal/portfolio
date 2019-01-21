@@ -110,5 +110,3 @@ function init() {
   window.onresize = resize;
 }
 init();
-
-// }

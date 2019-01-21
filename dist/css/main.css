@@ -422,6 +422,8 @@ main {
         left: -50px;
         margin-bottom: 10px;
         display: block; }
+        .navbar .nav-container .navbar-items .nav-item:nth-child(1) {
+          margin-top: 10px; }
   #about {
     width: 100%;
     padding-left: 0;
@@ -460,7 +462,7 @@ main {
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; }
+    margin-top: 20vh; }
   #projects .projects_titles {
     padding: 0.5rem; }
     #projects .projects_titles button {
