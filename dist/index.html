@@ -22,10 +22,10 @@
     <nav class="navbar">
       <div class="nav-container">
           <ul class="navbar-items">
-              <li class="nav-item active"><a href="#home">home</a></li>
+              <li class="nav-item "><a href="#home">home</a></li>
               <li class="nav-item "><a href="#about">about</a></li>
               <li class="nav-item"><a href="#projects">projects</a></li>
-              <li class="nav-item"><a href="#contact">contact</a></li>
+              <li class="nav-item active"><a href="#contact">contact</a></li>
             </ul>
             <div class="buttons">
               <div class="button"></div>
@@ -35,21 +35,21 @@
       </div>
      
     </nav>
-    <div class="cover"><h1>On the way ......</h1></div>
- 
+    <!-- <div class="cover"><h1>On the way ......</h1></div>
+  -->
 
     <main id="home">
       <h1 class="lg-heading">Ryan <span class="text-secondary">Wang</span></h1>
 
       <h2 class="sm-heading">Being a Web Developer ; )</h2>
-      <div class="icons">
+      <!-- <div class="icons">
         <a href="#"> <i class="fab fa-twitter fa-2x"></i> </a>
         <a href="#"> <i class="fab fa-facebook fa-2x"></i> </a>
         <a href="#"> <i class="fab fa-linkedin fa-2x"></i> </a>
         <a href="#"> <i class="fab fa-github fa-2x"></i> </a>
-      </div>
+      </div> -->
       <div class="main__arrow">
-        <a href="#projects"
+        <a href="#projects" class="arrow_down"
           >View My Work <span><i class="fas fa-arrow-right"></i></span
         ></a>
       </div>
@@ -333,10 +333,15 @@
       </div>
     </section>
 
-    <script src="js/main.js"></script>
+
     <script>
       const date = new Date();
       document.getElementById("year").textContent = date.getFullYear();
     </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

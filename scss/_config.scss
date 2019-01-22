@@ -1,7 +1,7 @@
 $primary-color: rgb(34, 33, 33);
 $secondary-color: rgb(238, 224, 23);
 $show-home-image: true;
-$home-image: url(../img/bg2.jpg);
+$home-image: url(../img/bg3.jpg);
 $background-opacity: 0.8;
 
 @mixin easeOut {
@@ -28,6 +28,33 @@ $background-opacity: 0.8;
         z-index: -1;
       }
     }
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  80% {
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
